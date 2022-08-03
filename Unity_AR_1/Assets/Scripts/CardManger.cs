@@ -22,6 +22,9 @@ namespace Quentin.AR.Vuforia
         private VirtualButtonBehaviour vbbJump;
 
         private string parVictory = "Ä²µo³Ó§Q";
+        private string parJump = "Ä²µo¸õÅD";
+        private string parAttack = "Ä²µo§ðÀ»";
+
         private AudioSource audBGM;
         private void Awake()
         {
@@ -34,10 +37,11 @@ namespace Quentin.AR.Vuforia
 
             audBGM = GameObject.Find("BGM").GetComponent<AudioSource>();
         }
-
+        //Ä²µo¸õÅD
         private void OnJumpPressed(VirtualButtonBehaviour obj)
         {
             print("<color=#3366dd>¸õÅD!!!</color>");
+            aniknight.SetTrigger(parJump);
         }
 
         /// <summary>
@@ -60,10 +64,11 @@ namespace Quentin.AR.Vuforia
             print("<color=red>¥d¤ù¿ëÃÑ¥¢±Ñ</color>");
             audBGM.Stop();
         }
-
+        //Ä²µo§ðÀ»
         private void Attack()
         {
             print("<color=#9955aa>§ðÀ»!!!</color>");
+            aniknight.SetTrigger(parAttack);
         }
 
 
